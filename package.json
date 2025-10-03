@@ -1,7 +1,7 @@
 {
   "name": "resume-parser-mern",
   "version": "1.0.0",
-  "description": "MERN Stack Resume Parser with DeepSeek API Integration",
+  "description": "MERN Stack Resume Parser with Gemini API Integration",
   "main": "server.js",
   "scripts": {
     "dev": "concurrently \"npm run server\" \"npm run client\"",
@@ -11,10 +11,19 @@
     "build": "cd frontend && npm run build",
     "start": "cd backend && npm start"
   },
-  "keywords": ["mern", "resume", "parser", "deepseek", "ai"],
+  "keywords": [
+    "mern",
+    "resume",
+    "parser",
+    "deepseek",
+    "ai"
+  ],
   "author": "AI Assistant",
   "license": "MIT",
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
   }
 }

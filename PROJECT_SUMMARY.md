@@ -2,13 +2,13 @@
 
 ## 🎉 Project Completed Successfully!
 
-This is a fully functional Resume Parser application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) with AI-powered resume data extraction using the DeepSeek API.
+This is a fully functional Resume Parser application built with the MERN stack (MongoDB, Express.js, React.js, Node.js) with AI-powered resume data extraction using the Gemini API.
 
 ## ✅ Completed Features
 
 ### Core Functionality
 - ✅ **Resume Upload**: Support for PDF and DOCX files with drag & drop interface
-- ✅ **AI Integration**: DeepSeek API integration for intelligent resume parsing
+- ✅ **AI Integration**: Gemini API integration for intelligent resume parsing
 - ✅ **User Authentication**: JWT-based login/registration system
 - ✅ **Database**: MongoDB with proper schema validation
 - ✅ **File Processing**: PDF and DOCX text extraction
@@ -27,7 +27,7 @@ This is a fully functional Resume Parser application built with the MERN stack (
 - ✅ **RESTful API**: Well-structured API endpoints
 - ✅ **Authentication**: Secure JWT-based auth with role management
 - ✅ **File Upload**: Multer-based file handling with validation
-- ✅ **AI Processing**: DeepSeek API integration for resume parsing
+- ✅ **AI Processing**: Gemini API integration for resume parsing
 - ✅ **Error Handling**: Comprehensive error management
 - ✅ **Security**: Rate limiting, CORS, helmet security
 - ✅ **Validation**: Input validation and sanitization
@@ -160,7 +160,7 @@ resume-parser-mern/
 - **clsx** - Conditional class names
 
 ### AI Integration
-- **DeepSeek API** - Resume data extraction
+- **Gemini API** - Resume data extraction
 - **Custom prompts** - Optimized for resume parsing
 - **Data validation** - Ensures extracted data quality
 

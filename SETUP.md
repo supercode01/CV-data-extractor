@@ -31,7 +31,7 @@ npm run install-all
    # Linux/Mac
    cp env.example .env
    ```
-3. The `.env` file is already configured with the DeepSeek API key. You may need to update:
+3. The `.env` file is already configured with the Gemini API key. You may need to update:
    - `MONGODB_URI` if using MongoDB Atlas
    - `JWT_SECRET` for production use
 
@@ -108,7 +108,7 @@ npm start
    - Check the `MONGODB_URI` in backend/.env
    - For MongoDB Atlas, ensure your IP is whitelisted
 
-3. **DeepSeek API Issues**
+3. **Gemini API Issues**
    - The API key is already configured
    - Check your internet connection
    - Verify the API key is valid
@@ -168,7 +168,7 @@ resume-parser-mern/
 ### Technical Features
 - **JWT Authentication**: Secure token-based auth
 - **File Processing**: PDF and DOCX text extraction
-- **AI Integration**: DeepSeek API for data parsing
+- **AI Integration**: Gemini API for data parsing
 - **Responsive Design**: Works on all devices
 - **Real-time Updates**: Live processing status
 - **Error Handling**: Comprehensive error management

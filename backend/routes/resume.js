@@ -65,7 +65,7 @@ router.post('/upload', authenticateToken, upload, handleUploadError, async (req,
       resume.extractedText = extractedText;
       await resume.save();
 
-      // Send text to DeepSeek API for parsing
+      // Send text to Gemini API for parsing
       try {
         const aiResult = await extractResumeData(extractedText);
         

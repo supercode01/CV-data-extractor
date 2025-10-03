@@ -1,11 +1,11 @@
 # Resume Parser MERN Application
 
-A fully functional Resume Parser Website built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that uses DeepSeek API to extract structured fields from resumes in PDF and DOCX format.
+A fully functional Resume Parser Website built with the MERN stack (MongoDB, Express.js, React.js, Node.js) that uses Gemini API to extract structured fields from resumes in PDF and DOCX format.
 
 ## 🚀 Features
 
 - **Resume Upload**: Support for PDF and DOCX files with drag & drop interface
-- **AI-Powered Extraction**: Uses DeepSeek API to extract structured data from resumes
+- **AI-Powered Extraction**: Uses Gemini API to extract structured data from resumes
 - **User Authentication**: JWT-based login and registration system
 - **Dashboard**: Professional interface for managing parsed resumes
 - **User History**: Track all previous resume uploads and parsed data
@@ -47,7 +47,7 @@ The system extracts the following fields from resumes:
 - React Dropzone for file uploads
 
 ### AI Integration
-- DeepSeek API for resume data extraction
+- Gemini API for resume data extraction
 
 ## 📦 Installation
 
@@ -85,7 +85,7 @@ The system extracts the following fields from resumes:
      ```env
      MONGODB_URI=mongodb://localhost:27017/resume-parser
      JWT_SECRET=your_super_secret_jwt_key_here
-     DEEPSEEK_API_KEY=sk-or-v1-c7f885375c4d92bc3fac9574ce54af5d10df926e568f217c4989ca367e002
+     GEMINI_API_KEY=********
      PORT=5000
      ```
 

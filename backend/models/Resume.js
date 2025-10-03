@@ -31,7 +31,9 @@ const resumeSchema = new mongoose.Schema({
   },
   extractedText: {
     type: String,
-    required: [true, 'Extracted text is required']
+    // Not required at creation time; will be populated after processing
+    required: false,
+    default: ''
   },
   parsedData: {
     fullName: {
