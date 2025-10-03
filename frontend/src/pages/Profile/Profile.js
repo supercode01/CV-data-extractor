@@ -216,7 +216,7 @@ const Profile = () => {
                 value={profileData.email}
                 onChange={handleProfileChange}
                 required
-                helperText="This will be used for login and notifications"
+                helperText="This will be used for login"
               />
 
               <div className="flex justify-end">
@@ -283,7 +283,7 @@ const Profile = () => {
                 />
                 <button
                   type="button"
-                  className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                  className="absolute inset-y-0 right-0 pr-3 mb-6 flex items-center"
                   onClick={() => togglePasswordVisibility('new')}
                   style={{ top: '28px' }}
                 >

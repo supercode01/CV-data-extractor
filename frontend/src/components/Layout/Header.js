@@ -46,9 +46,9 @@ const Header = ({ onMenuClick }) => {
           {/* Right side */}
           <div className="flex items-center space-x-4">
             {/* Notifications */}
-            <Button variant="ghost" size="sm">
+            {/* <Button variant="ghost" size="sm">
               <HiBell className="h-5 w-5" />
-            </Button>
+            </Button> */}
 
             {/* Profile dropdown */}
             <div className="relative">
