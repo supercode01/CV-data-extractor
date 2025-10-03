@@ -57,7 +57,7 @@ export const resumeAPI = {
       onUploadProgress,
     }),
   getHistory: (params) => api.get('/resume/history', { params }),
-  getResume: (id) => api.get(`/resume/${id}`),
+  getResume: (id) => api.get(`/resume/${id}`).then((res) => res.data),
   deleteResume: (id) => api.delete(`/resume/${id}`),
   searchResumes: (query, params) => api.get(`/resume/search/${query}`, { params }),
   exportResume: (id, includeText = false) => 
