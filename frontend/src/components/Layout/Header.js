@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { 
   HiMenu, 
-  HiBell, 
   HiUser, 
   HiCog, 
   HiLogout,
@@ -22,7 +21,7 @@ const Header = ({ onMenuClick }) => {
   };
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
+    <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Left side */}
@@ -37,7 +36,7 @@ const Header = ({ onMenuClick }) => {
             </Button>
             
             <div className="hidden lg:block">
-              <h1 className="text-xl font-semibold text-gray-900">
+              <h1 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Resume Parser
               </h1>
             </div>
@@ -63,20 +62,20 @@ const Header = ({ onMenuClick }) => {
                     {user?.firstName?.[0]}{user?.lastName?.[0]}
                   </span>
                 </div>
-                <span className="hidden sm:block text-sm font-medium text-gray-700">
+                <span className="hidden sm:block text-sm font-medium text-gray-700 dark:text-gray-300">
                   {user?.firstName} {user?.lastName}
                 </span>
-                <HiChevronDown className="h-4 w-4 text-gray-400" />
+                <HiChevronDown className="h-4 w-4 text-gray-400 dark:text-gray-500" />
               </Button>
 
               {/* Profile dropdown menu */}
               {profileMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
-                  <div className="px-4 py-2 border-b border-gray-200">
-                    <p className="text-sm font-medium text-gray-900">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg py-1 z-50 border border-gray-200 dark:border-gray-700">
+                  <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700">
+                    <p className="text-sm font-medium text-gray-900 dark:text-white">
                       {user?.firstName} {user?.lastName}
                     </p>
-                    <p className="text-sm text-gray-500 break-all">{user?.email}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 break-all">{user?.email}</p>
                     {user?.role === 'admin' && (
                       <Badge variant="primary" size="sm" className="mt-1">
                         Admin
@@ -86,7 +85,7 @@ const Header = ({ onMenuClick }) => {
                   
                   <Link
                     to="/profile"
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                     onClick={() => setProfileMenuOpen(false)}
                   >
                     <HiUser className="h-4 w-4 mr-3" />
@@ -95,7 +94,7 @@ const Header = ({ onMenuClick }) => {
                   
                   <Link
                     to="/settings"
-                    className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                     onClick={() => setProfileMenuOpen(false)}
                   >
                     <HiCog className="h-4 w-4 mr-3" />
@@ -104,7 +103,7 @@ const Header = ({ onMenuClick }) => {
                   
                   <button
                     onClick={handleLogout}
-                    className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    className="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     <HiLogout className="h-4 w-4 mr-3" />
                     Sign out

@@ -4,7 +4,6 @@ import { useQuery } from 'react-query';
 import { adminAPI, formatFileSize, formatDate } from '../../services/api';
 import {
   HiSearch,
-  HiFilter,
   HiDocumentText,
   HiDownload,
   HiTrash,

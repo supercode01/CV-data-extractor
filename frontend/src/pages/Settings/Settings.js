@@ -3,7 +3,6 @@ import { useAuth } from '../../contexts/AuthContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import {
   HiUser,
-  HiMail,
   HiKey,
   HiSave,
   HiEye,
@@ -13,10 +12,7 @@ import {
   HiShieldCheck,
   HiTrash,
   HiDownload,
-  HiUpload,
-  HiColorSwatch,
   HiGlobe,
-  HiClock,
 } from 'react-icons/hi';
 import Button from '../../components/UI/Button';
 import Input from '../../components/UI/Input';
@@ -26,7 +22,7 @@ import toast from 'react-hot-toast';
 
 const Settings = () => {
   const { user, updateProfile, changePassword } = useAuth();
-  const { t, changeLanguage } = useLanguage();
+  const { changeLanguage } = useLanguage();
   const [activeTab, setActiveTab] = useState('profile');
   
   // Profile form state
@@ -454,7 +450,7 @@ const Settings = () => {
                       />
                       <button
                         type="button"
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                        className="absolute inset-y-0 right-0 pr-3 mb-6 flex items-center"
                         onClick={() => togglePasswordVisibility('new')}
                         style={{ top: '28px' }}
                       >
@@ -553,13 +549,13 @@ const Settings = () => {
                   <form onSubmit={handlePreferencesSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Theme
                         </label>
                         <select
                           value={preferences.theme}
                           onChange={(e) => handleThemeChange(e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         >
                           <option value="light">Light</option>
                           <option value="dark">Dark</option>
@@ -568,13 +564,13 @@ const Settings = () => {
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Language
                         </label>
                         <select
                           value={preferences.language}
                           onChange={(e) => handleLanguageChange(e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         >
                           <option value="en">English</option>
                           <option value="es">Spanish</option>
@@ -616,10 +612,10 @@ const Settings = () => {
                       {Object.entries(preferences.notifications).map(([key, value]) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
-                            <h4 className="text-sm font-medium text-gray-900 capitalize">
+                            <h4 className="text-sm font-medium text-gray-900 dark:text-white capitalize">
                               {key.replace(/([A-Z])/g, ' $1').trim()}
                             </h4>
-                            <p className="text-sm text-gray-600">
+                            <p className="text-sm text-gray-600 dark:text-gray-400">
                               {key === 'email' && 'Receive notifications via email'}
                               {key === 'push' && 'Receive push notifications'}
                               {key === 'resumeUpdates' && 'Get notified when resume processing is complete'}
@@ -670,13 +666,13 @@ const Settings = () => {
                   <form onSubmit={handlePreferencesSubmit} className="space-y-6">
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                           Profile Visibility
                         </label>
                         <select
                           value={preferences.privacy.profileVisibility}
                           onChange={(e) => handlePreferenceChange('privacy', 'profileVisibility', e.target.value)}
-                          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                         >
                           <option value="private">Private</option>
                           <option value="public">Public</option>
@@ -686,8 +682,8 @@ const Settings = () => {
 
                       <div className="flex items-center justify-between">
                         <div>
-                          <h4 className="text-sm font-medium text-gray-900">Data Sharing</h4>
-                          <p className="text-sm text-gray-600">
+                          <h4 className="text-sm font-medium text-gray-900 dark:text-white">Data Sharing</h4>
+                          <p className="text-sm text-gray-600  ">
                             Allow sharing of anonymized data for product improvement
                           </p>
                         </div>

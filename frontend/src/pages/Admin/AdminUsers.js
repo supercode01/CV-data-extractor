@@ -3,10 +3,8 @@ import { useQuery } from 'react-query';
 import { adminAPI, formatDate } from '../../services/api';
 import {
   HiSearch,
-  HiFilter,
   HiUsers,
   HiTrash,
-  HiEye,
   HiRefresh,
   HiUser,
   HiShieldCheck,

@@ -249,13 +249,13 @@ const Register = () => {
 
         <div className="text-xs text-gray-500 text-center">
           By creating an account, you agree to our{' '}
-          <a href="#" className="text-primary-600 hover:text-primary-500">
+          <button type="button" className="text-primary-600 hover:text-primary-500">
             Terms of Service
-          </a>{' '}
+          </button>{' '}
           and{' '}
-          <a href="#" className="text-primary-600 hover:text-primary-500">
+          <button type="button" className="text-primary-600 hover:text-primary-500">
             Privacy Policy
-          </a>
+          </button>
         </div>
       </div>
     </div>

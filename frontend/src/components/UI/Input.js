@@ -23,7 +23,7 @@ const Input = ({
       {label && (
         <label
           htmlFor={inputId}
-          className="block text-sm font-medium text-gray-700 mb-1"
+          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
         >
           {label}
           {required && <span className="text-error-500 ml-1">*</span>}
@@ -42,7 +42,7 @@ const Input = ({
         className={clsx(
           'input',
           error && 'input-error',
-          disabled && 'bg-gray-50 cursor-not-allowed'
+          disabled && 'bg-gray-50 dark:bg-gray-700 cursor-not-allowed'
         )}
         {...props}
       />
@@ -54,7 +54,7 @@ const Input = ({
       )}
       
       {helperText && !error && (
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
           {helperText}
         </p>
       )}

@@ -89,10 +89,10 @@ const Dashboard = () => {
     <div className="space-y-6">
       {/* Header */}
       <div>
-        <h1 className="text-2xl font-bold text-gray-900">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
           Welcome back, {user?.firstName}!
         </h1>
-        <p className="mt-1 text-sm text-gray-600">
+        <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
           Manage your resumes and track parsing progress.
         </p>
       </div>
@@ -105,10 +105,10 @@ const Dashboard = () => {
               <div className="mx-auto h-12 w-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors">
                 <HiUpload className="h-6 w-6 text-primary-600" />
               </div>
-              <h3 className="mt-4 text-lg font-medium text-gray-900">
+              <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
                 Upload Resume
               </h3>
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                 Upload a new resume for AI-powered parsing
               </p>
             </div>
@@ -121,10 +121,10 @@ const Dashboard = () => {
               <div className="mx-auto h-12 w-12 bg-secondary-100 rounded-lg flex items-center justify-center group-hover:bg-secondary-200 transition-colors">
                 <HiDocumentText className="h-6 w-6 text-secondary-600" />
               </div>
-              <h3 className="mt-4 text-lg font-medium text-gray-900">
+              <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
                 Resume History
               </h3>
-              <p className="mt-2 text-sm text-gray-600">
+              <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                 View all your uploaded and parsed resumes
               </p>
             </div>
@@ -138,10 +138,10 @@ const Dashboard = () => {
                 <div className="mx-auto h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors">
                   <HiChartBar className="h-6 w-6 text-purple-600" />
                 </div>
-                <h3 className="mt-4 text-lg font-medium text-gray-900">
+                <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
                   Admin Panel
                 </h3>
-                <p className="mt-2 text-sm text-gray-600">
+                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                   Manage users and system analytics
                 </p>
               </div>
@@ -160,10 +160,10 @@ const Dashboard = () => {
                   <stat.icon className={`h-6 w-6 ${stat.color}`} />
                 </div>
                 <div className="ml-4">
-                  <p className="text-sm font-medium text-gray-600">
+                  <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
                     {stat.name}
                   </p>
-                  <p className="text-2xl font-semibold text-gray-900">
+                  <p className="text-2xl font-semibold text-gray-900 dark:text-white">
                     {stat.value}
                   </p>
                 </div>
@@ -177,7 +177,7 @@ const Dashboard = () => {
       <div className="card">
         <div className="card-header">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium text-gray-900">
+            <h3 className="text-lg font-medium text-gray-900 dark:text-white">
               Recent Resumes
             </h3>
             <Link to="/history">
@@ -198,16 +198,16 @@ const Dashboard = () => {
               {resumeData.resumes.map((resume) => (
                 <div
                   key={resume.id}
-                  className="flex items-center justify-between p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex items-center justify-between p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <div className="flex items-center space-x-4">
                     {getStatusIcon(resume.processingStatus)}
                     <div>
-                      <h4 className="text-sm font-medium text-gray-900">
+                      <h4 className="text-sm font-medium text-gray-900 dark:text-white">
                         {resume.originalFileName}
                       </h4>
                       {resume.parsedData?.fullName && (
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {resume.parsedData.fullName}
                         </p>
                       )}
@@ -228,10 +228,10 @@ const Dashboard = () => {
           ) : (
             <div className="text-center py-8">
               <HiDocumentText className="mx-auto h-12 w-12 text-gray-400" />
-              <h3 className="mt-2 text-sm font-medium text-gray-900">
+              <h3 className="mt-2 text-sm font-medium text-gray-900 dark:text-white">
                 No resumes yet
               </h3>
-              <p className="mt-1 text-sm text-gray-500">
+              <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                 Get started by uploading your first resume.
               </p>
               <div className="mt-6">

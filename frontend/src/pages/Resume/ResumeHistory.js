@@ -4,7 +4,6 @@ import { useQuery } from 'react-query';
 import { resumeAPI, formatFileSize, formatDate } from '../../services/api';
 import {
   HiSearch,
-  HiFilter,
   HiDocumentText,
   HiDownload,
   HiTrash,
@@ -15,11 +14,9 @@ import Button from '../../components/UI/Button';
 import Input from '../../components/UI/Input';
 import Badge from '../../components/UI/Badge';
 import LoadingSpinner from '../../components/UI/LoadingSpinner';
-import { useAuth } from '../../contexts/AuthContext';
 import toast from 'react-hot-toast';
 
 const ResumeHistory = () => {
-  const { user } = useAuth();
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
