@@ -8,6 +8,7 @@ import {
   HiUsers,
   HiCog,
   HiX,
+  HiAdjustments,
   HiShieldCheck,
   HiChartBar,
   HiDocumentDuplicate,
@@ -33,6 +34,11 @@ const Sidebar = ({ isOpen, onClose }) => {
       name: 'Resume History',
       href: '/history',
       icon: HiDocumentText,
+    },
+    {
+      name: 'Settings',
+      href: '/settings',
+      icon: HiAdjustments,
     },
   ];
 

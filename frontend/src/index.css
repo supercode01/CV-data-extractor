@@ -10,6 +10,51 @@
   body {
     @apply bg-gray-50 text-gray-900;
   }
+
+  /* Dark mode styles */
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
+
+  .dark .card {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .dark .card-header {
+    @apply border-gray-700;
+  }
+
+  .dark .card-footer {
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .dark .input {
+    @apply bg-gray-700 border-gray-600 text-gray-100 placeholder-gray-400;
+  }
+
+  .dark .btn-secondary {
+    @apply bg-gray-700 text-gray-100 border-gray-600 hover:bg-gray-600;
+  }
+
+  .dark .badge-primary {
+    @apply bg-primary-900 text-primary-200;
+  }
+
+  .dark .badge-success {
+    @apply bg-success-900 text-success-200;
+  }
+
+  .dark .badge-warning {
+    @apply bg-warning-900 text-warning-200;
+  }
+
+  .dark .badge-error {
+    @apply bg-error-900 text-error-200;
+  }
+
+  .dark .badge-gray {
+    @apply bg-gray-700 text-gray-200;
+  }
 }
 
 @layer components {

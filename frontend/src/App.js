@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 
 // Context Providers
 import { AuthProvider } from './contexts/AuthContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 
 // Components
 import Layout from './components/Layout/Layout';
@@ -22,6 +23,7 @@ import AdminDashboard from './pages/Admin/AdminDashboard';
 import AdminUsers from './pages/Admin/AdminUsers';
 import AdminResumes from './pages/Admin/AdminResumes';
 import Profile from './pages/Profile/Profile';
+import Settings from './pages/Settings/Settings';
 import NotFound from './pages/NotFound';
 
 // Create a client
@@ -38,8 +40,9 @@ const queryClient = new QueryClient({
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <Router>
+      <LanguageProvider>
+        <AuthProvider>
+          <Router>
           <div className="App">
             <Routes>
               {/* Public Routes */}
@@ -58,6 +61,7 @@ function App() {
                 <Route path="history" element={<ResumeHistory />} />
                 <Route path="resume/:id" element={<ResumeDetails />} />
                 <Route path="profile" element={<Profile />} />
+                <Route path="settings" element={<Settings />} />
                 
                 {/* Admin Routes */}
                 <Route path="admin" element={
@@ -108,7 +112,8 @@ function App() {
             />
           </div>
         </Router>
-      </AuthProvider>
+        </AuthProvider>
+      </LanguageProvider>
     </QueryClientProvider>
   );
 }
