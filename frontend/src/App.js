@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Toaster } from 'react-hot-toast';
@@ -38,6 +38,31 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  // Initialize theme on app startup
+  useEffect(() => {
+    const savedPreferences = localStorage.getItem('userPreferences');
+    if (savedPreferences) {
+      const preferences = JSON.parse(savedPreferences);
+      const root = document.documentElement;
+      const body = document.body;
+      
+      if (preferences.theme === 'dark') {
+        root.classList.add('dark');
+        body.classList.add('dark');
+      } else {
+        // Default to light theme for 'light' and 'auto' modes
+        root.classList.remove('dark');
+        body.classList.remove('dark');
+      }
+    } else {
+      // No saved preferences - default to light theme
+      const root = document.documentElement;
+      const body = document.body;
+      root.classList.remove('dark');
+      body.classList.remove('dark');
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <LanguageProvider>
